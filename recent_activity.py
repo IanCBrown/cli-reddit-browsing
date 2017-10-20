@@ -9,7 +9,6 @@ def get_info(redditor):
 
     try:
         reddit_account = reddit.redditor(redditor)
-        # assume you have a Subreddit instance bound to variable `subreddit`
         os.system('clear')
         print("Finding info on " + "\"" + reddit_account.name + "\"")
 
@@ -30,8 +29,4 @@ def get_info(redditor):
         print("Redditor not found")
 
 
-
-redditor_name = input("Input a redditor: ")
-
-get_info(redditor_name)
 

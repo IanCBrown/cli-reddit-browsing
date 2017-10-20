@@ -18,14 +18,8 @@ def get_sub(subreddit):
     except prawcore.exceptions.NotFound:
         print("Subreddit not found")
 
-# try:
-#     subreddit = input("Input a subreddit: ")
-#     get_sub(subreddit)
-# except prawcore.exceptions.NotFound:
-#     print("Subreddit not found")
 
-subreddit = input("Input a subreddit: ")
-get_sub(subreddit)
+
 
 
 
