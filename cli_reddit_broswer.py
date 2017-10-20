@@ -2,7 +2,7 @@ import praw
 import prawcore
 import os
 import sys 
-from misc_scraper import get_sub
+from subreddit_scraper import get_sub
 from recent_activity import get_info
 
 
