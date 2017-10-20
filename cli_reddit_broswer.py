@@ -30,6 +30,10 @@ def get_user():
 
 """Main Event Loop"""
 while True:
-    user_action = input("[Q] - Quit\t [S] - Broswer a Subreddit\t [U] - View a user\n")
-    switch(user_action.lower())
+    try:
+        user_action = input("[Q] - Quit\t [S] - Broswer a Subreddit\t [U] - View a user\n")
+        switch(user_action.lower())
+    except KeyboardInterrupt:
+        print("Forced exit")
+        sys.exit()
         

@@ -30,3 +30,10 @@ def get_info(redditor):
 
 
 
+def main():
+    redditor_name = input("Input a redditor: ")
+    get_info(redditor_name)
+
+
+if __name__ == '__main__':
+    main()

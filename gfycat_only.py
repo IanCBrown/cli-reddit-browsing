@@ -16,5 +16,11 @@ def get_webms(subreddit):
         print("Subreddit not found")
 
 
-subreddit = input("Input a subreddit: ")
-get_webms(subreddit)
+
+def main():
+    subreddit = input("Input a subreddit: ")
+    get_webms(subreddit)
+
+
+if __name__ == '__main__':
+    main()

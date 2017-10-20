@@ -19,7 +19,10 @@ def get_sub(subreddit):
         print("Subreddit not found")
 
 
+def main():
+    subreddit = input("Input a subreddit: ")
+    get_sub(subreddit)
 
 
-
-
+if __name__ == '__main__':
+    main()
