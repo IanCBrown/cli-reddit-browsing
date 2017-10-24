@@ -16,6 +16,7 @@ def get_info(redditor):
         for submission in reddit.redditor(reddit_account.name).submissions.hot():
             print(submission.title)
             print(submission.url)
+            
 
         print("/////////////////////////////////\n")
         print("/////////////////////////////////\n")
