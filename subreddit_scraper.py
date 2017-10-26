@@ -5,7 +5,10 @@ import sys
 
 
 def get_sub(subreddit):
-    """retrieves top 10 current posts from 'hot'"""
+    """ queries reddit for a user specified subreddit and retrieves the current 
+        top ten 'hot' submissions. 
+    """
+    
     reddit = praw.Reddit(client_id='LJLwIfxLzSjbug', 
                         client_secret='_c_TeQKNiHjTnIIqpgLbI4Fc8Kg', 
                         user_agent='misc_reader')

@@ -3,6 +3,10 @@ import prawcore
 import os
 
 def get_info(redditor):
+    """ queries reddit for a user specified user and retrieves some basic info 
+        if that user exists. 
+    """
+
     reddit = praw.Reddit(client_id='LJLwIfxLzSjbug', 
                         client_secret='_c_TeQKNiHjTnIIqpgLbI4Fc8Kg', 
                         user_agent='retrieve_recent_posts')
