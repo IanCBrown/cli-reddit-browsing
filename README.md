@@ -7,5 +7,8 @@ They can be used indivdually or all accessed in a CLI interface provided through
 ## Motiviation 
 I wanted to make a fun/interesting way to browse one of my favorite websites. 
 
+you can add aliases to your bashrc, zshrc, etc. for ease of use. For example: 
+* alias reddit='python cli_reddit_browser.py'
+
 ## Dependencies 
 This was made with Python3 using the Reddit praw and prawcore APIs. 

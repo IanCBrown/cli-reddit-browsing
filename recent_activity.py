@@ -16,19 +16,25 @@ def get_info(redditor):
         os.system('clear')
         print("Finding info on " + "\"" + reddit_account.name + "\"")
 
+        # Get last 10 submissions
         print("Submissions: \n")
+        # 'i' is for numbering posts in output for improved readability
+        i = 1
         for submission in reddit.redditor(reddit_account.name).submissions.hot():
-            print(submission.title)
-            print(submission.url)
-            
+            print("{}. ".format(i) + submission.title)
+            print("https://www.reddit.com" + submission.permalink + "\n")
+            i += 1
 
         print("/////////////////////////////////\n")
         print("/////////////////////////////////\n")
 
+        # Get last 10 comments. May take a while
         print("Last 10 comments: \n")
+        i = 1
         for comment in reddit.redditor(reddit_account.name).comments.hot(limit=10):
-            print(comment.submission.title)
-            print("https://www.reddit.com" + comment.permalink(fast=True) + "\n")
+            print("{}. ".format(i) + comment.submission.title)
+            print("https://www.reddit.com" + comment.permalink + "\n")
+            i += 1
 
     except prawcore.exceptions.NotFound:
         print("Redditor not found")
