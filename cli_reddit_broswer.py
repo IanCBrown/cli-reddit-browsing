@@ -8,9 +8,9 @@ from recent_activity import get_info
 
 
 def switch(user_input):
-    """ Using a dictionary as a switch for cli options
-    Future functions will be added here 
-    """
+    # Using a dictionary as a switch for cli options
+    # Future functions will be added here 
+    
     try:
         actions = { 'q' : quit,
                     's' : get_posts,
