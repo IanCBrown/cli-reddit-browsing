@@ -12,10 +12,10 @@ def domains(user_input):
     # Using a dictionary as a switch for cli options
     # Future functions will be added here 
     try:
-        actions = { 'g' : ['gfycat.com'],
+        actions = { 'g' : ['gfycat.com', ''],
                     'y' : ['youtube.com', 'youtu.be'],
                     'i' : ['imgur.com', 'i.imgur.com'],
-                    's' : ['streamable.com'] }
+                    's' : ['streamable.com', ''] }
         return actions[user_input]
     except KeyError:
         print("Command not found")
@@ -43,11 +43,14 @@ def get_domains(subreddit):
         print("Subreddit not found")
 
 def main():
-    subreddit = input("Input a subreddit: ")
-    domain = input("Choose a domain:\n[G] - gfycat\t[Y] - youtube\t[I] - imgur\t[S] - streamble\n")
+    try:
+        subreddit = input("Input a subreddit: ")
+        domain = input("Choose a domain:\n[G] - gfycat\t[Y] - youtube\t[I] - imgur\t[S] - streamble\n")
 
-    get_posts_from_domains(subreddit, domains(domain))
-
+        get_posts_from_domains(subreddit, domains(domain))
+    except TypeError:
+        print("Command not found")
+        sys.exit()
 
 if __name__ == '__main__':
     main()
