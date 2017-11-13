@@ -47,7 +47,7 @@ def main():
         subreddit = input("Input a subreddit: ")
         domain = input("Choose a domain:\n[G] - gfycat\t[Y] - youtube\t[I] - imgur\t[S] - streamble\n")
 
-        get_posts_from_domains(subreddit, domains(domain))
+        get_posts_from_domains(subreddit, domains(domain.lower()))
     except TypeError:
         print("Command not found")
         sys.exit()
