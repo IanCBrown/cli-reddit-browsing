@@ -1,15 +1,16 @@
 import praw
 import prawcore 
 import os
+from praw_creds import client_id, client_secret, password, user_agent, username
 
 def get_info(redditor):
     """ queries reddit for a user specified user and retrieves some basic info 
         if that user exists. 
     """
 
-    reddit = praw.Reddit(client_id='LJLwIfxLzSjbug', 
-                        client_secret='_c_TeQKNiHjTnIIqpgLbI4Fc8Kg', 
-                        user_agent='retrieve_recent_posts')
+    reddit = praw.Reddit(client_id=client_id, 
+                        client_secret=client_secret, 
+                        user_agent=user_agent)
 
     try:
         reddit_account = reddit.redditor(redditor)
