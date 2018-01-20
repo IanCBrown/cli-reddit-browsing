@@ -2,12 +2,13 @@ import praw
 import prawcore
 import os
 import sys
+from praw_creds import client_id, client_secret, password, user_agent, username
 
 # TODO give the user the ability to specify domain (youtube, imgur, etc), not just 
 # gfycat
-reddit = praw.Reddit(client_id='LJLwIfxLzSjbug', 
-                        client_secret='_c_TeQKNiHjTnIIqpgLbI4Fc8Kg', 
-                        user_agent='retrieve_webms_from_gfycat')
+reddit = praw.Reddit(client_id=client_secret, 
+                        client_secret=client_secret, 
+                        user_agent=user_agent)
 def domains(user_input):
     # Using a dictionary as a switch for cli options
     # Future functions will be added here 

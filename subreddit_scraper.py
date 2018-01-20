@@ -2,6 +2,7 @@ import praw
 import prawcore
 import os
 import sys
+from praw_creds import client_id, client_secret, password, user_agent, username
 
 
 def get_sub(subreddit):
@@ -9,9 +10,9 @@ def get_sub(subreddit):
         top ten 'hot' submissions. 
     """
 
-    reddit = praw.Reddit(client_id='LJLwIfxLzSjbug', 
-                        client_secret='_c_TeQKNiHjTnIIqpgLbI4Fc8Kg', 
-                        user_agent='misc_reader')
+    reddit = praw.Reddit(client_id=client_id, 
+                        client_secret=client_secret, 
+                        user_agent=user_agent)
     try:
         subreddit = reddit.subreddit(subreddit)
         os.system('clear')
